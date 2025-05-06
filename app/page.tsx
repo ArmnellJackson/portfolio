@@ -15,10 +15,33 @@ export default function Home() {
       <main className="container mx-auto px-4 py-8">
         {/* Layout Grid - Reorganizado según el boceto */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Columna izquierda en desktop */}
-          <div className="md:col-span-1 flex flex-col space-y-8">
-            {/* Cart 1: Perfil */}
+          {/* Perfil - Ahora fuera de las columnas para que aparezca primero en móvil */}
+          <div className="md:hidden order-1">
             <div className="rounded-lg p-4">
+              <div className="flex flex-col items-start mb-4">
+                <h1 className="text-2xl font-bold tracking-tight text-black dark:text-white">ARMNELL GÓMEZ.</h1>
+                <p className="text-sm text-[#424242] dark:text-[#E0E0E0] uppercase">Desarrollador Full Stack</p>
+              </div>
+
+              <p className="text-sm leading-relaxed mb-4 text-black dark:text-white">
+                Me especializo en crear experiencias digitales visualmente impactantes y fáciles de usar. Con pasión por
+                combinar estética y funcionalidad, doy vida a ideas, creando soluciones innovadoras en el dinámico mundo
+                del desarrollo web.
+              </p>
+
+              <Link
+                href="/contacto"
+                className="inline-block px-6 py-2 bg-black dark:bg-black border border-[#E0E0E0] dark:border-[#E0E0E0] rounded-full text-sm text-white dark:text-white hover:bg-[#E0E0E0] hover:text-black dark:hover:bg-[#E0E0E0] dark:hover:text-black transition-colors"
+              >
+                Contáctame
+              </Link>
+            </div>
+          </div>
+
+          {/* Columna izquierda en desktop */}
+          <div className="md:col-span-1 flex flex-col space-y-8 order-4 md:order-1">
+            {/* Cart 1: Perfil - Solo visible en desktop */}
+            <div className="hidden md:block rounded-lg p-4">
               <div className="flex flex-col items-start mb-4">
                 {/* <div className="relative w-16 h-16 rounded-full overflow-hidden mb-4">
                   <Image
@@ -75,10 +98,6 @@ export default function Home() {
                     <p className="font-medium text-white dark:text-white">Git y GitHub</p>
                     <p className="text-xs text-[#E0E0E0] dark:text-[#E0E0E0]">Platzi • 2023</p>
                   </li>
-                  {/* <li>
-                    <p className="font-medium text-white dark:text-white">React Native Fundamentals</p>
-                    <p className="text-xs text-[#E0E0E0] dark:text-[#E0E0E0]">Coursera • 2021</p>
-                  </li> */}
                 </ul>
               </div>
             </div>
@@ -100,7 +119,7 @@ export default function Home() {
           </div>
 
           {/* Columna derecha en desktop */}
-          <div className="md:col-span-2 flex flex-col space-y-8">
+          <div className="md:col-span-2 flex flex-col space-y-8 order-2 md:order-2">
             {/* Cart 2: Servicios */}
             <section className="bg-[#424242] dark:bg-[#424242] text-white dark:text-white rounded-lg p-6">
               <div className="flex justify-between items-center mb-6">
