@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Globe, Smartphone, Palette, ShoppingCart } from "lucide-react"
+import { Globe, Smartphone, Palette, ShoppingCart, Building2, Code2 } from "lucide-react"
 import ProjectCard from "@/components/project-card"
 import TechStack from "@/components/tech-stack"
 import Navbar from "@/components/navbar"
@@ -20,15 +20,15 @@ export default function Home() {
             {/* Cart 1: Perfil */}
             <div className="rounded-lg p-4">
               <div className="flex flex-col items-start mb-4">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden mb-4">
+                {/* <div className="relative w-16 h-16 rounded-full overflow-hidden mb-4">
                   <Image
-                    src="/placeholder.svg?height=64&width=64"
+                    src="/images/........"
                     alt="Perfil de Armnell Jackson Gómez Garcia"
                     width={64}
                     height={64}
-                    className="rounded-full bg-[#E0E0E0] dark:bg-[#E0E0E0]"
+                    className="rounded-full bg-[#E0E0E0] dark:bg-[#E0E0E0] h-16 w-auto"
                   />
-                </div>
+                </div> */}
                 <h1 className="text-2xl font-bold tracking-tight text-black dark:text-white">ARMNELL GÓMEZ.</h1>
                 <p className="text-sm text-[#424242] dark:text-[#E0E0E0] uppercase">Desarrollador Full Stack</p>
               </div>
@@ -36,7 +36,7 @@ export default function Home() {
               <p className="text-sm leading-relaxed mb-4 text-black dark:text-white">
                 Me especializo en crear experiencias digitales visualmente impactantes y fáciles de usar. Con pasión por
                 combinar estética y funcionalidad, doy vida a ideas, creando soluciones innovadoras en el dinámico mundo
-                del desarrollo web y móvil.
+                del desarrollo web.
               </p>
 
               <Link
@@ -60,25 +60,25 @@ export default function Home() {
               >
                 <ul className="space-y-3">
                   <li className="border-b border-[#E0E0E0]/20 pb-2">
-                    <p className="font-medium text-white dark:text-white">Desarrollo Web Full Stack</p>
-                    <p className="text-xs text-[#E0E0E0] dark:text-[#E0E0E0]">Universidad Tecnológica • 2023</p>
-                  </li>
-                  <li className="border-b border-[#E0E0E0]/20 pb-2">
-                    <p className="font-medium text-white dark:text-white">UX/UI Design Professional</p>
-                    <p className="text-xs text-[#E0E0E0] dark:text-[#E0E0E0]">Google Certificate • 2022</p>
-                  </li>
-                  <li className="border-b border-[#E0E0E0]/20 pb-2">
                     <p className="font-medium text-white dark:text-white">AWS Cloud Practitioner</p>
-                    <p className="text-xs text-[#E0E0E0] dark:text-[#E0E0E0]">Amazon Web Services • 2022</p>
+                    <p className="text-xs text-[#E0E0E0] dark:text-[#E0E0E0]">Platzi • 2023</p>
                   </li>
                   <li className="border-b border-[#E0E0E0]/20 pb-2">
-                    <p className="font-medium text-white dark:text-white">JavaScript Avanzado</p>
-                    <p className="text-xs text-[#E0E0E0] dark:text-[#E0E0E0]">Udemy • 2021</p>
+                    <p className="font-medium text-white dark:text-white">Fundamentos de Data</p>
+                    <p className="text-xs text-[#E0E0E0] dark:text-[#E0E0E0]">Platzi • 2023</p>
                   </li>
-                  <li>
+                  <li className="border-b border-[#E0E0E0]/20 pb-2">
+                    <p className="font-medium text-white dark:text-white">Pensamiento Logico</p>
+                    <p className="text-xs text-[#E0E0E0] dark:text-[#E0E0E0]">Platzi • 2023</p>
+                  </li>
+                  <li className="border-b border-[#E0E0E0]/20 pb-2">
+                    <p className="font-medium text-white dark:text-white">Git y GitHub</p>
+                    <p className="text-xs text-[#E0E0E0] dark:text-[#E0E0E0]">Platzi • 2023</p>
+                  </li>
+                  {/* <li>
                     <p className="font-medium text-white dark:text-white">React Native Fundamentals</p>
                     <p className="text-xs text-[#E0E0E0] dark:text-[#E0E0E0]">Coursera • 2021</p>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -109,24 +109,24 @@ export default function Home() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <ServiceCard
-                  title="Diseño y Desarrollo Web"
-                  description="Sitios web y aplicaciones personalizadas para empresas de todos los tamaños. Desde landing pages simples hasta complejas soluciones de comercio electrónico."
+                  title="Páginas Web"
+                  description="Desarrollo de páginas web estáticas y dinámicas, perfectas para blogs personales o profesionales. Incluye diseño responsivo, optimización SEO y gestión de contenido intuitiva."
                   icon={Globe}
                 />
                 <ServiceCard
-                  title="Desarrollo de Aplicaciones Móviles"
-                  description="Aplicaciones móviles nativas y multiplataforma para iOS y Android. Interfaces amigables con funcionalidad perfecta."
-                  icon={Smartphone}
+                  title="Sitios Web Corporativos"
+                  description="Sitios web completos para empresas, con secciones de servicios, portafolio, equipo y contacto. Diseñados para mostrar la identidad de tu marca y conectar con tus clientes."
+                  icon={Building2}
                 />
                 <ServiceCard
-                  title="Diseño UI/UX"
-                  description="Experiencias de usuario intuitivas y atractivas. Wireframing, prototipado y diseño visual para productos digitales."
-                  icon={Palette}
-                />
-                <ServiceCard
-                  title="Soluciones de E-commerce"
-                  description="Tiendas online con pasarelas de pago seguras, gestión de inventario y herramientas de relación con clientes."
+                  title="Aplicaciones Web E-commerce"
+                  description="Plataformas de comercio electrónico con pasarelas de pago seguras, gestión de inventario, carrito de compras y panel de administración completo."
                   icon={ShoppingCart}
+                />
+                <ServiceCard
+                  title="Aplicaciones Web Especializadas"
+                  description="Soluciones SaaS personalizadas para consultorios médicos y veterinarios (citas online, historias clínicas), gestión de restaurantes (pedidos, reservas, inventario) y sistemas de recursos humanos (gestión de empleados, nómina, vacaciones)."
+                  icon={Code2}
                 />
               </div>
             </section>
