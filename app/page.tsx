@@ -20,7 +20,7 @@ export default function Home() {
           <div className="md:hidden order-1">
             <div className="rounded-lg p-4">
               <div className="flex flex-col items-start mb-4">
-                <h1 className="text-2xl font-bold tracking-tight text-black dark:text-white">ARMNELL GÓMEZ.</h1>
+                <h1 className="text-2xl font-bold tracking-tight text-black dark:text-white">ARMNELL GÓMEZ</h1>
                 <p className="text-sm text-[#424242] dark:text-[#E0E0E0] uppercase">Desarrollador Full Stack</p>
               </div>
 
