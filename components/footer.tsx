@@ -42,7 +42,7 @@ export default function Footer() {
             <h3 className="font-bold text-lg text-black dark:text-white">Conectar</h3>
             <div className="flex items-center space-x-4">
               <a
-                href="https://github.com/armnell-jackson"
+                href="https://github.com/ArmnellJackson"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Github"
@@ -51,29 +51,13 @@ export default function Footer() {
                 <Github size={20} />
               </a>
               <a
-                href="https://twitter.com/armnelljackson"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-                className="text-[#424242] hover:text-black dark:text-[#E0E0E0] dark:hover:text-white"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="https://linkedin.com/in/armnell-jackson"
+                href="https://www.linkedin.com/in/armnell-jackson-gomez-garcia-b01619152/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="text-[#424242] hover:text-black dark:text-[#E0E0E0] dark:hover:text-white"
               >
                 <Linkedin size={20} />
-              </a>
-              <a
-                href="mailto:contacto@armnelljackson.com"
-                aria-label="Email"
-                className="text-[#424242] hover:text-black dark:text-[#E0E0E0] dark:hover:text-white"
-              >
-                <Mail size={20} />
               </a>
             </div>
             <p className="text-xs text-[#424242] dark:text-[#E0E0E0] pt-4">
