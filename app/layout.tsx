@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Armnell Jackson Gómez Garcia" }],
   creator: "Armnell Jackson Gómez Garcia",
   icons: {
-    icon: '/images/favicon.png',
+    icon: '/portfolio/images/favicon.png',
   },
   openGraph: {
     type: "website",

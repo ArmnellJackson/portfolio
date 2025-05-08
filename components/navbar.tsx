@@ -27,7 +27,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center">
             <Image
-              src={theme === "dark" ? "/images/logo-claro.png" : "/images/logo-oscuro.png"}
+              src={theme === "dark" ? "/portfolio/images/logo-claro.png" : "/portfolio/images/logo-oscuro.png"}
               alt="Logo Armnell Gómez"
               width={180}
               height={50}
