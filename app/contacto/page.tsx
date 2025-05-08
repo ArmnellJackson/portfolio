@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useForm, ValidationError } from "@formspree/react"
+import { useEffect, useRef } from "react"
 import Link from "next/link"
 import { ArrowLeft, Mail, Phone, MapPin, Send } from "lucide-react"
 import Navbar from "@/components/navbar"
@@ -9,6 +10,13 @@ import Footer from "@/components/footer"
 
 export default function ContactoPage() {
   const [state, handleSubmit] = useForm("xpwdrazz")
+  const formRef = useRef<HTMLFormElement>(null)
+
+  useEffect(() => {
+    if (state.succeeded) {
+      formRef.current?.reset()
+    }
+  }, [state.succeeded])
 
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white">
@@ -39,7 +47,7 @@ export default function ContactoPage() {
               </div>
             ) : null}
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="nombre" className="block text-sm font-medium mb-1 text-white dark:text-white">
                   Nombre
