@@ -6,6 +6,7 @@ import TechStack from "@/components/tech-stack"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import ServiceCard from "@/components/service-card"
+import { projects } from "@/data/projects"
 
 export default function Home() {
   return (
@@ -170,11 +171,15 @@ export default function Home() {
                     scrollbarColor: "#E0E0E0 #424242",
                   }}
                 >
-                  <ProjectCard title="Blog de Viajes" description="Plataforma para compartir experiencias de viaje" />
-                  <ProjectCard title="App de Finanzas" description="Aplicación para gestión de gastos personales" />
-                  <ProjectCard title="E-commerce" description="Tienda online para productos artesanales" />
-                  <ProjectCard title="Dashboard" description="Panel de control para análisis de datos" />
-                  <ProjectCard title="Red Social" description="Plataforma para conectar profesionales" />
+                  {projects.map((project, index) => (
+                    <ProjectCard
+                      key={index}
+                      title={project.title}
+                      description={project.description}
+                      image={project.image}
+                      link={project.link}
+                    />
+                  ))}
                 </div>
                 <div className="absolute left-0 bottom-0 w-full h-1 bg-[#000000]/10 dark:bg-[#000000]/10 rounded-full">
                   <div className="w-1/3 h-full bg-[#E0E0E0]/30 dark:bg-[#E0E0E0]/30 rounded-full"></div>

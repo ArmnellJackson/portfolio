@@ -3,13 +3,14 @@ import { ArrowLeft } from "lucide-react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import ProjectCard from "@/components/project-card"
+import { projects } from "@/data/projects"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Proyectos | Armnell Jackson Gómez Garcia",
   description:
-    "Explora los proyectos de desarrollo web y móvil de Armnell Jackson Gómez Garcia, desarrollador full stack.",
-  keywords: "proyectos, desarrollo web, desarrollo móvil, portfolio, armnell jackson gómez garcia",
+    "Explora los proyectos de desarrollo web de Armnell Jackson Gómez Garcia, desarrollador full stack.",
+  keywords: "proyectos, desarrollo web, portfolio, armnell jackson gómez garcia",
 }
 
 export default function ProyectosPage() {
@@ -31,15 +32,15 @@ export default function ProyectosPage() {
         <h1 className="text-3xl font-bold mb-8">Mis Proyectos</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
-          <ProjectCard title="Blog de Viajes" description="Plataforma para compartir experiencias de viaje" />
-          <ProjectCard title="App de Finanzas" description="Aplicación para gestión de gastos personales" />
-          <ProjectCard title="E-commerce" description="Tienda online para productos artesanales" />
-          <ProjectCard title="Dashboard" description="Panel de control para análisis de datos" />
-          <ProjectCard title="Red Social" description="Plataforma para conectar profesionales" />
-          <ProjectCard title="Portfolio Fotográfico" description="Galería para fotógrafos profesionales" />
-          <ProjectCard title="Aplicación de Recetas" description="Colección de recetas con planificador de comidas" />
-          <ProjectCard title="Plataforma Educativa" description="Sistema de gestión de cursos online" />
-          <ProjectCard title="Gestor de Tareas" description="Aplicación para organizar proyectos y tareas" />
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              link={project.link}
+            />
+          ))}
         </div>
       </main>
 

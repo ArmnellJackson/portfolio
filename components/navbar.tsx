@@ -2,13 +2,16 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { useTheme } from "next-themes"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
+  const { theme } = useTheme()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -22,8 +25,14 @@ export default function Navbar() {
     <header className="bg-white dark:bg-black border-b border-[#E0E0E0] dark:border-[#424242] sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="font-bold text-xl text-black dark:text-white">
-            ARMNELL GÓMEZ.
+          <Link href="/" className="flex items-center">
+            <Image
+              src={theme === "dark" ? "/images/logo-claro.png" : "/images/logo-oscuro.png"}
+              alt="Logo Armnell Gómez"
+              width={180}
+              height={50}
+              className="h-10 w-auto rounded-lg"
+            />
           </Link>
 
           {/* Desktop Navigation */}
