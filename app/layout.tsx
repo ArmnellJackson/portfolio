@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     "desarrollador full stack, desarrollo web, react, next.js, typescript, javascript, aws, portfolio, armnell jackson gómez garcia",
   authors: [{ name: "Armnell Jackson Gómez Garcia" }],
   creator: "Armnell Jackson Gómez Garcia",
+  icons: {
+    icon: '/images/favicon.png',
+  },
   openGraph: {
     type: "website",
     locale: "es_ES",
