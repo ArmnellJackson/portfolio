@@ -7,19 +7,10 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Blog de Viajes",
-    description: "Plataforma para compartir experiencias de viaje",
-    image: "/portfolio/images/logo-claro.png"
-  },
-  {
-    title: "App de Finanzas",
-    description: "Aplicación para gestión de gastos personales",
-    image: "/portfolio/images/logo-oscuro.png"
-  },
-  {
-    title: "E-commerce",
-    description: "Tienda online para productos artesanales",
-    image: "/portfolio/images/logo-claro.png"
+    title: "Eros Store",
+    description: "E-commerce de artículos para adultos. Sin DB ni registro de usuarios. Con la posibilidad de consumir la PA-API de Amazon Associates.",
+    image: "/portfolio/images/eros-store-logo.png",
+    link: "https://erosstore.github.io/e-commerce/"
   },
   {
     title: "Dashboard",
