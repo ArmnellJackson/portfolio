@@ -2,13 +2,15 @@ import {
   SiReact,
   SiNextdotjs,
   SiTailwindcss,
-  //SiTypescript,
+  SiTypescript,
   SiJavascript,
   SiAmazonwebservices,
   //SiNodedotjs,
   //SiMongodb,
   //SiDocker,
   SiGit,
+  SiMysql,
+  SiAwsamplify,
 } from "react-icons/si"
 
 interface TechStackProps {
@@ -17,16 +19,19 @@ interface TechStackProps {
 
 export default function TechStack({ showLabels = false }: TechStackProps) {
   const technologies = [
+    { icon: SiMysql, name: "MySQL" },
     { icon: SiReact, name: "React" },
     { icon: SiNextdotjs, name: "Next.js" },
     { icon: SiTailwindcss, name: "Tailwind" },
 //    { icon: SiTypescript, name: "TypeScript" },
     { icon: SiJavascript, name: "JavaScript" },
+    { icon: SiTypescript, name: "TypeScript" },
 //    { icon: SiNodedotjs, name: "Node.js" },
 //    { icon: SiMongodb, name: "MongoDB" },
 //    { icon: SiDocker, name: "Docker" },
     { icon: SiGit, name: "Git" },
     { icon: SiAmazonwebservices, name: "AWS" },
+    { icon: SiAwsamplify, name: "AWS Amplify" },
   ]
 
   return (
