@@ -33,7 +33,6 @@ export const metadata: Metadata = {
       "Portfolio personal de Armnell Jackson Gómez Garcia, desarrollador full stack especializado en crear experiencias digitales impactantes y funcionales.",
     creator: "@armnelljackson",
   },
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -44,7 +43,12 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
         </ThemeProvider>
       </body>
