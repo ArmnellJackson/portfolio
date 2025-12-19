@@ -178,6 +178,7 @@ export default function Home() {
                       description={project.description}
                       image={project.image}
                       link={project.link}
+                      repoLink={project.repoLink}
                     />
                   ))}
                 </div>
